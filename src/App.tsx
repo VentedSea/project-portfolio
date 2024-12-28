@@ -90,6 +90,7 @@ const AboutMeBody = () => {
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>React</div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>Python</div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>SQL</div>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>Three.js</div>
       </div>
     </div>
   )
@@ -122,7 +123,19 @@ const Projects = () => {
     <div className={styles.homeBody}>
       <div className={styles.nameBody}>
         <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>My Projects</div>
-         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Work in progress</div>
+         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Mars Rover Game</div>
+         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>3D browser game made with Three.js and Ammo.js for a university project with 2 other people. Worked on rover mechanics.</div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Youtube demo: </div><a>https://youtu.be/pDRAcM6aVtw</a></div>
+
+         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Code Sorter</div>
+         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>Simple VS code extention that sorts lines by either length or alphabetically.</div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Github: </div><a>https://github.com/VentedSea/line-sorter</a></div>
+
+         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>This portfolio page</div>
+         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>React web app using Three.js for background spheres and movement.</div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Github: </div><a>https://github.com/VentedSea/project-portfolio</a></div>
+     
+         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Others in progress...</div>
       </div>
     </div>
   )
