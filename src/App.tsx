@@ -103,15 +103,33 @@ const ContactInfo = () => {
         <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>Contact Info</div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>
           <div className={styles.smallRightSpacer}>Email:</div>
-          <a>Richievsims@Gmail.com</a>
+          <a 
+            href="mailto:Richievsims@Gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Richievsims@Gmail.com
+          </a>
         </div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>
           <div className={styles.smallRightSpacer}>LinkedIn:</div>
-          <a>https://www.linkedin.com/in/richard-sims-475785285/</a>
+          <a 
+            href="https://www.linkedin.com/in/richard-sims-475785285/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn Profile
+          </a>
         </div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>
           <div className={styles.smallRightSpacer}>Github:</div>
-          <a>https://github.com/VentedSea</a>
+          <a 
+            href="https://github.com/VentedSea"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Profile
+          </a>
         </div>
       </div>
     </div>
@@ -125,15 +143,42 @@ const Projects = () => {
         <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>My Projects</div>
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Mars Rover Game</div>
          <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>3D browser game made with Three.js and Ammo.js for a university project with 2 other people. Worked on rover mechanics.</div>
-         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Youtube demo: </div><a>https://youtu.be/pDRAcM6aVtw</a></div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
+            <div className={styles.smallRightSpacer}>Youtube demo:</div>
+            <a 
+              href="https://youtu.be/pDRAcM6aVtw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://youtu.be/pDRAcM6aVtw
+            </a>
+          </div>
 
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Code Sorter</div>
          <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>Simple VS code extention that sorts lines by either length or alphabetically.</div>
-         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Github: </div><a>https://github.com/VentedSea/line-sorter</a></div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
+            <div className={styles.smallRightSpacer}>Github:</div>
+            <a 
+              href="https://github.com/VentedSea/line-sorter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repository
+            </a>
+          </div>
 
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>This portfolio page</div>
          <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>React web app using Three.js for background spheres and movement.</div>
-         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}><div className={styles.smallRightSpacer}>Github: </div><a>https://github.com/VentedSea/project-portfolio</a></div>
+         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
+            <div className={styles.smallRightSpacer}>Github:</div>
+            <a 
+              href="https://github.com/VentedSea/project-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repository
+            </a>
+          </div>
      
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Others in progress...</div>
       </div>
