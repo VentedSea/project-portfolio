@@ -143,7 +143,7 @@ const Projects = () => {
         <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>My Projects</div>
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Mars Rover Game</div>
          <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>3D browser game made with Three.js and Ammo.js for a university project with 2 other people. Worked on rover mechanics.</div>
-         <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
+         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>
             <div className={styles.smallRightSpacer}>Youtube demo:</div>
             <a 
               href="https://youtu.be/pDRAcM6aVtw"
@@ -151,6 +151,16 @@ const Projects = () => {
               rel="noopener noreferrer"
             >
               https://youtu.be/pDRAcM6aVtw
+            </a>
+          </div>
+          <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
+            <div className={styles.smallRightSpacer}>Play now:</div>
+            <a 
+              href="https://rover.richardsims.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rover game
             </a>
           </div>
 
