@@ -47,6 +47,7 @@ function App() {
     <div className={styles.body}>
       {currentTab === Tabs.Home && <HomeBody />}
       {currentTab === Tabs.AboutMe && <AboutMeBody />}
+      {currentTab === Tabs.Projects && <Projects />}
     </div>
     </>
   )
