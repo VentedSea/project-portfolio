@@ -40,7 +40,7 @@ const SphereBackground = () => {
     });
     
     // Add lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
     
     const pointLight = new THREE.PointLight(0xffffff, 1);
