@@ -5,6 +5,12 @@ import styles from './App.module.css'
 // import ParticleBackground from './components/ParticleBackground'
 import SphereBackground from './components/SphereBackground'
 
+const multiClass = (...classNames: string[]) => {
+  return classNames
+    .filter((className: string) => className !== undefined && className !== null && className !== '')
+    .join(' ');
+};
+
 const Tabs = {
   Home: 'Home',
   AboutMe: 'About me',
@@ -39,15 +45,51 @@ function App() {
     <SphereBackground />
     <Header currentTab={currentTab} setCurrentTab={setCurrentTab}/>
     <div className={styles.body}>
-      <div className={styles.homeBody}>
-        <div className={styles.nameBody}>
-          <div className={styles.smallHeader}>My name is</div>
-          <div className={styles.largeHeader}>Richard Sims</div>
-          <div className={styles.smallHeader}>Software Engineer</div>
-        </div>
-      </div>
+      {currentTab === Tabs.Home && <HomeBody />}
+      {currentTab === Tabs.AboutMe && <AboutMeBody />}
     </div>
     </>
+  )
+}
+
+const HomeBody = () => {
+  return (
+    <div className={styles.homeBody}>
+      <div className={styles.nameBody}>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer)}>Hi, I'm</div>
+        <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>Richard Sims</div>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer)}>Software Engineer</div>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>I like building things</div>
+      </div>
+    </div>
+  )
+}
+
+const AboutMeBody = () => {
+  return (
+    <div className={styles.homeBody}>
+      <div className={styles.nameBody}>
+        <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>So who am I?</div>
+        <div className={multiClass(styles.mediumHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Education</div>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Bachelor Science in Computer Science (2020 - 2022)</div>
+        <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>Bachelor Science Honours in Computer Science (2023)</div>
+
+        <div className={multiClass(styles.mediumHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Work Experience</div>
+        <div className={multiClass(styles.smallHeader, styles.smallBottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Software Engineer, Syft Analytics (Xero) (Jan 2024 - current)</div>
+        <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>Fullstack. Developing responsive frontends and efficient backends, for users to review to analytical data.</div>
+      </div>
+    </div>
+  )
+}
+
+const Projects = () => {
+  return (
+    <div className={styles.homeBody}>
+      <div className={styles.nameBody}>
+        <div className={multiClass(styles.largeHeader, styles.largeBottomSpacer)}>My Projects</div>
+         <div className={multiClass(styles.mediumHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Work in progress</div>
+      </div>
+    </div>
   )
 }
 
