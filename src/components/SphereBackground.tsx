@@ -33,11 +33,17 @@ const SphereBackground = () => {
     // Create spheres
     const spheres: THREE.Mesh[] = [];
     const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
-    const sphereMaterial = new THREE.MeshPhongMaterial({
-      color: 0x777777,
-      specular: 0x666666,
-      shininess: 60,
-    });
+    const originalColor = new THREE.Color(0x777777);
+    const mouseColor = new THREE.Color(0x00ff00);  // Green color
+    
+    // Create a unique material for each sphere
+    const createSphereMaterial = () => {
+      return new THREE.MeshPhongMaterial({
+        color: originalColor.clone(),
+        specular: 0x666666,
+        shininess: 60,
+      });
+    };
     
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -48,12 +54,16 @@ const SphereBackground = () => {
     scene.add(pointLight);
     
     // Create grid of spheres
-    const gridSize = 20;
-    const spacing = 3;
+    // const aspect = window.innerWidth / window.innerHeight;
+    const gridSize = {
+      x: Math.ceil(25 * aspect), // Adjust horizontal grid based on aspect ratio
+      y: 25
+    };
+    const spacing = 2.5; // Slightly reduced spacing to fit more spheres
     
-    for (let x = -gridSize; x <= gridSize; x++) {
-      for (let y = -gridSize; y <= gridSize; y++) {
-        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    for (let x = -gridSize.x; x <= gridSize.x; x++) {
+      for (let y = -gridSize.y; y <= gridSize.y; y++) {
+        const sphere = new THREE.Mesh(sphereGeometry, createSphereMaterial());
         sphere.position.set(x * spacing, y * spacing, 0);
         sphere.userData.originalPosition = sphere.position.clone();
         scene.add(sphere);
@@ -115,6 +125,11 @@ const SphereBackground = () => {
         
         // Make sphere face the camera
         sphere.quaternion.copy(camera.quaternion);
+        
+        // Update color based on distance to mouse
+        const material = sphere.material as THREE.MeshPhongMaterial;
+        const colorInfluence = Math.max(0, 1 - distanceToMouse / 8); // Adjust the 8 to change the radius of color effect
+        material.color.copy(originalColor).lerp(mouseColor, colorInfluence);
       });
       
       renderer.render(scene, camera);
