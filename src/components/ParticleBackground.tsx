@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const SphereBackground = () => {
@@ -111,7 +111,7 @@ const SphereBackground = () => {
     // Cleanup
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
-      spheres.forEach(sphere => {
+      spheres.forEach((sphere: any) => {
         scene.remove(sphere);
         sphere.geometry.dispose();
         sphere.material.dispose();

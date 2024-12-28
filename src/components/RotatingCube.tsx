@@ -4,30 +4,6 @@ import { OrbitControls } from '@react-three/drei'
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 
-import { Text3D } from '@react-three/drei'
-
-function FloatingText() {
-  const textRef: any = useRef()
-  
-  useFrame(({ clock }) => {
-    textRef.current.position.y = Math.sin(clock.getElapsedTime()) * 0.2 + 1
-    textRef.current.rotation.y = Math.sin(clock.getElapsedTime() * 0.5) * 0.2
-  })
-
-  return (
-    <Text3D 
-      ref={textRef}
-      // font="/path/to/helvetiker_regular.json"
-      font={'calbri'}
-      size={0.75}
-      height={0.2}
-      curveSegments={12}
-    >
-      Your Name
-      <meshStandardMaterial metalness={0.5} roughness={0.2} color="#ffffff" />
-    </Text3D>
-  )
-}
 
 function ParticleGalaxy() {
   const particlesCount = 5000
@@ -104,7 +80,7 @@ function DNAHelix() {
   const points = 50
   const radius = 2
   
-  useFrame(({ clock }) => {
+  useFrame(() => {
     group.current.rotation.y += 0.005
   })
 

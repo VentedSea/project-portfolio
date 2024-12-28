@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import styles from './App.module.css'
-import RotatingCube from './components/RotatingCube'
-import ParticleBackground from './components/ParticleBackground'
+// import RotatingCube from './components/RotatingCube'
+// import ParticleBackground from './components/ParticleBackground'
 import SphereBackground from './components/SphereBackground'
 
 const Tabs = {
