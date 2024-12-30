@@ -80,10 +80,10 @@ const AboutMeBody = () => {
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.leftSpacer)}>Bachelor Science Honours in Computer Science (2023)</div>
 
         <div className={multiClass(styles.mediumHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Work Experience</div>
-        <div className={multiClass(styles.smallHeader, styles.smallBottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Acedemic tutor (2023)</div>
-        <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>Tutoring third year ComSci students for university, awarded for acedemic excellence in third year.</div>
+        <div className={multiClass(styles.smallHeader, styles.smallBottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Academic tutor (2023)</div>
+        <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>Tutoring third year ComSci students for university, awarded for academic excellence in third year.</div>
         <div className={multiClass(styles.smallHeader, styles.smallBottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Software Engineer, Syft Analytics (Xero) (Jan 2024 - current)</div>
-        <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>Fullstack. Developing responsive frontends and efficient backends, for users to review to analytical data.</div>
+        <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>Fullstack. Developing responsive front-ends and efficient backends, for users to review to analytical data.</div>
       
         <div className={multiClass(styles.mediumHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Languages and frameworks</div>
         <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer, styles.leftSpacer)}>Typescript + Javascript</div>
@@ -165,7 +165,7 @@ const Projects = () => {
           </div>
 
          <div className={multiClass(styles.smallHeader, styles.bottomSpacer, styles.largeTopSpacer)}>Code Sorter</div>
-         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>Simple VS code extention that sorts lines by either length or alphabetically.</div>
+         <div className={multiClass(styles.smallerHeader, styles.largeLeftSpacer)}>Simple VS code extension that sorts lines by either length or alphabetically.</div>
          <div className={multiClass(styles.smallerHeader, styles.bottomSpacer, styles.largeLeftSpacer)}>
             <div className={styles.smallRightSpacer}>Github:</div>
             <a 
